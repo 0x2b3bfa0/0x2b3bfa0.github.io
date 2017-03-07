@@ -1,6 +1,6 @@
 _site
 Gemfile.lock
-.sass-cache 
+.sass-cache
 
 *.DS_Store
 .AppleDouble
