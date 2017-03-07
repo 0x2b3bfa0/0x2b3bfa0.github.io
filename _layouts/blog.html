@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <!--
+  <h1 class="page-heading">Posts</h1>
+  -->
+  {{ content }}
+
+  <ul class="post-list">
+    {% if site.posts.size > 0 %}
+      {% for post in site.posts %}
+        <li onclick="location.href='{{ post.url | relative_url }}';">
+            <h2>
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              <a class="post-meta post-meta-list">{{ post.date | date: "%b %-d, %Y" }}</a>
+            </h2>
+          {% if site.show_excerpts == "enabled" %}
+            <hr class="headliner">
+            {{ post.excerpt }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% else %}
+      <li class="noposts">No posts yet. Please wait until I write the first one. While you wait, you can watch some videos of Les Luthiers. Also you can take dig into my repositories and do pull requests or fill issues.</li>
+    {% endif %}
+  </ul>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
+</div>

@@ -1,0 +1,50 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <!--
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    -->
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a>
+            {% if site.author %}
+              {{ site.author | escape }}
+            {% else %}
+              {{ site.title | escape }}
+            {% endif %}
+          </a></li>
+            {% if site.email %}
+            <li><a id="ZW1haWw=" href="mailto:hidden@without.javascript">{{ site.email }}</a></li>
+            {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github %}
+          <li>
+            {% include icon-github.html username=site.github %}
+          </li>
+          {% endif %}
+
+          {% if site.googleplus %}
+          <li>
+            {% include icon-googleplus.html username=site.googleplus %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <script>
+        ZW1haWw = document.getElementById("ZW1haWw=")
+        ZW1haWw.innerHTML = atob(ZW1haWw.innerHTML)
+        ZW1haWw.href = "mailto:" + ZW1haWw.innerHTML
+      </script>
+      <div class="footer-col footer-col-3">
+        <p style="display: inline-block; text-align: left;">{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
