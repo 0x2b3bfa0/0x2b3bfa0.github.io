@@ -11,7 +11,7 @@ layout: default
 
   <ul class="post-list">
     {% if site.portfolio.size > 0 %}
-      {% for item in siteportfolio %}
+      {% for item in site.portfolio %}
         <li onclick="location.href='{{ item.url | relative_url }}';">
             <h2>
               <a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
@@ -21,6 +21,7 @@ layout: default
             <hr class="headliner">
             {{ post.excerpt }}
           {% endif %}
+          <img src="{{ item.url | relative_url }}" />
         </li>
       {% endfor %}
     {% else %}
