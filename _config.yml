@@ -28,6 +28,10 @@ permalink: pretty
 
 markdown: kramdown
 theme: minima
+
+collections:
+  - portfolio
+
 gems:
   - jekyll-feed
 exclude:

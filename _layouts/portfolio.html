@@ -10,12 +10,12 @@ layout: default
   {{ content }}
 
   <ul class="post-list">
-    {% if site.art.size > 0 %}
-      {% for art in site.art %}
-        <li onclick="location.href='{{ art.url | relative_url }}';">
+    {% if site.portfolio.size > 0 %}
+      {% for item in siteportfolio %}
+        <li onclick="location.href='{{ item.url | relative_url }}';">
             <h2>
-              <a class="post-link" href="{{ art.url | relative_url }}">{{ art.title | escape }}</a>
-              <a class="post-meta post-meta-list">{{ art.date | date: "%b %-d, %Y" }}</a>
+              <a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              <a class="post-meta post-meta-list">{{ item.date | date: "%b %-d, %Y" }}</a>
             </h2>
           {% if site.show_excerpts == "enabled" %}
             <hr class="headliner">
