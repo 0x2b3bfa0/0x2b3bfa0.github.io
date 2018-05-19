@@ -34,6 +34,7 @@
 
 .site-nav {
   line-height: 56px;
+  z-index: 1;
 
   .menu-icon {
     display: none;
@@ -41,6 +42,10 @@
     background-color: $white-alt-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
+
+    -webkit-box-sizing: unset;
+    -moz-box-sizing: unset;
+    box-sizing: unset;
 
     width: 36px;
     height: 26px;

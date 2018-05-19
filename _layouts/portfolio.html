@@ -3,32 +3,36 @@ layout: default
 ---
 
 <div class="home">
+  <div id="image-gallery" class="image-gallery" >
+    <div id="gallery-sizer" class="gallery-sizer" style="width:100%;"></div>
+    {% for item in page.pictures %}
+    <div class="image-wrapper">
+      <a href="{{ site.url }}{{ site.baseurl }}/assets/{{page.picture_path}}/{{ item.original }}"
+      data-responsive="{% for size in item.sizes %} {{ site.url }}{{ site.baseurl }}/assets/{{page.picture_path}}/{{ size }} {{ size | split: '-' | last | split: '.' | first | split: 'x' | first | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="image"
+      {% if item.title %} data-sub-html="<div class='lg-toolbar caption'><h4>{{ item.title | escape }}</h4>{% if item.caption %}<p>{{ item.caption | escape }}</p>{% endif %}</div>"{% endif %}>
+        <img alt="{{ item.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/{{page.picture_path}}/{{ item.thumbnail }}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 
-  <!--
-  <h1 class="page-heading">Posts</h1>
-  -->
-  {{ content }}
-
-  <ul class="post-list">
-    {% if site.portfolio.size > 0 %}
-      {% for item in site.portfolio %}
-        <li onclick="location.href='{{ item.url | relative_url }}';">
-            <h2>
-              <a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-              <a class="post-meta post-meta-list">{{ item.date | date: "%b %-d, %Y" }}</a>
-            </h2>
-          {% if site.show_excerpts == "enabled" %}
-            <hr class="headliner">
-            {{ post.excerpt }}
-          {% endif %}
-          <img src="{{ item.url }}" />
-        </li>
-      {% endfor %}
-    {% else %}
-      <li class="noposts">No items yet. Please wait until I decide to show anything. In the meanwhile, you can read my blog.</li>
-    {% endif %}
-  </ul>
-
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-
+  <script>
+    $(document).ready(function() {
+      var $gallery = $("#image-gallery").lightGallery({
+        thumbnail: false,
+        selector: '.image'
+      });
+    });
+    // init isotope
+    var $grid = $('#image-gallery').isotope({
+      percentPosition: true,
+      columnWidth: '#gallery-sizer',
+      itemSelector: '.image-wrapper',
+      layoutMode: "masonry"
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    });
+  </script>
 </div>

@@ -29,10 +29,10 @@ permalink: pretty
 markdown: kramdown
 theme: minima
 
-collections:
-  - portfolio
+# collections:
+#   - portfolio
 
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
