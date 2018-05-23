@@ -105,4 +105,11 @@ pictures:
   thumbnail: thumbnail-11.jpg
   title: Ejercicio 13
   caption:
+  
+  - filename: 12
+  original: 20180523_155715~2.jpg
+  sizes:
+  - 20180523_155715~2.jpg
+  thumbnail: 20180523_155715~2.jpg
+  title: Ejercicio 15
 ---
