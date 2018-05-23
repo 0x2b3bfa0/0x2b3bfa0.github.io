@@ -107,11 +107,11 @@ pictures:
   caption:
   
 - filename: 12
-  original: "12.jpg"
-  datasheet: ""
+  original: 12.jpg
+  datasheet: 12.pdf
   sizes:
-  - "12.jpg"
-  thumbnail: "12.jpg"
+  - 12.jpg
+  thumbnail: 12.jpg
   title: Ejercicio 15
   caption:
 ---
