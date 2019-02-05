@@ -1,14 +1,14 @@
 title: Helio Machado
 author: Helio Machado
-blog_title: /var/log/crushedice2000
+blog_title: /var/log/0x2b3bfa0
 
 googleplus:
   - +Helio Machado
   - https://plus.google.com/+HelioMachadoM
 
-github: crushedice2000
+github: 0x2b3bfa0
 
-email: Y3J1c2hlZGljZTIwMDBAZ21haWwuY29t # Base64 descrambled at runtime. I hate spam.
+email: MHgyYjNiZmEwK2NvbnRhY3RAZ29vZ2xlbWFpbC5jb20= # Base64 descrambled at runtime. I hate spam.
 
 description: >
   A place to log my life with different verbosity levels.
@@ -21,8 +21,8 @@ encoding: utf-8
 baseurl: ""
 url: "https://crushedice2000.github.io"
 
-disqus:
-  shortname: crushedice2000
+# disqus:
+#   shortname: 0x2b3bfa0 # TODO create a new disqus account
 
 permalink: pretty
 
