@@ -34,15 +34,6 @@ pictures:
   title: Ejercicio 3
   caption:
 
-- filename: 4
-  original: 4.jpg
-  datasheet: 4.pdf
-  sizes:
-  - 4.jpg
-  thumbnail: thumbnail-4.jpg
-  title: Ejercicio 4 (libro de artista)
-  caption:
-
 - filename: 5
   original: 5.jpg
   datasheet: 5.pdf
