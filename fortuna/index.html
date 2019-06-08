@@ -101,7 +101,7 @@
         function trigger_event() {
             elapsed_time = new Date().getTime() - start_time
             start_time = new Date().getTime() 
-            //if(elapsed_time < 1) {return}
+            if(elapsed_time < 100) {return}
             full_screen();
             element.hidden = !element.hidden; 
             document.body.className = element.hidden ? 'colors' : ''
