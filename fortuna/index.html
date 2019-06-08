@@ -117,5 +117,11 @@
         setInterval(function() {
             element.className = (window.innerHeight > window.innerWidth) ? 'portrait' : 'landscape'
         }, 500);
+	
+	if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+	    });
+	}
     </script>
 </html>
