@@ -8,8 +8,8 @@
             body {
                 margin:0;
                 padding:0;
-                -webkit-transition: 2s;
-                transition: 2s;
+                /*-webkit-transition: 2s;
+                transition: 2s;*/
             }
 
             #picture {
@@ -105,7 +105,7 @@
         var element = document.getElementById("picture");
 
         on_swipe(document.body, trigger_event);
-        document.body.addEventListener('click', trigger_event);
+        document.body.addEventListener('click', trigger_event, false);
         document.body.addEventListener('tap', trigger_event);
 
         setInterval(function() {
