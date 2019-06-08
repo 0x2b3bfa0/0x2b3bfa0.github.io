@@ -2,7 +2,6 @@ cache_name = 'static-cache-1';
 files= ['./index.html'];
 
 self.addEventListener('install', (event) => {
-    console.log('[ServiceWorker] Install');
     event.waitUntil(
         caches.open(cache_name).then((cache) => {
             return cache.addAll(files)
