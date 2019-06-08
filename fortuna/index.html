@@ -97,6 +97,7 @@
             }, false)
         }
 
+	start_time = 0;
         function trigger_event() {
             elapsed_time = new Date().getTime() - start_time
             start_time = new Date().getTime() 
@@ -109,7 +110,7 @@
         var element = document.getElementById("picture");
 
         //on_swipe(document.body, trigger_event);
-        //document.body.addEventListener('touchend', trigger_event, false);
+        document.body.addEventListener('touchend', trigger_event, false);
         document.body.addEventListener('click', trigger_event, false);
         document.body.addEventListener('tap', trigger_event, false);
 
